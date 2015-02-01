@@ -14,3 +14,5 @@ main = do
     print $ facts 2
     print $ facts 1  -- cで失敗
     print $ facts 0  -- bで失敗
+    print $ map fact [3,2,1]
+    print $ mapMaybe fact [3,2,1]
