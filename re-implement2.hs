@@ -10,10 +10,9 @@ facts n = ( map      fact [n, n - 1, n - 2]
           )
 
 mapMaybe' _ [] = []
-mapMaybe' f (x:xs) = do
-    let a = f x
-        (Just a') = a
-    a' : mapMaybe' f xs
+mapMaybe' f (x:xs) = case f x of
+    Just y -> y : mapMaybe' f xs
+    Nothing -> mapMaybe' f xs
 
 main = do
     print $ facts 3
