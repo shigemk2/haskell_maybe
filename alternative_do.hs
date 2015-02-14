@@ -9,4 +9,7 @@ check x = do
     Just x              -- 合流
 
 main = do
-    forM_ [1..5] $ \x -> print $ check x
+    -- forM_ [1..5] $ \x -> print $ check x
+    print $ check 0
+    print $ check 1
+    print $ check 2
