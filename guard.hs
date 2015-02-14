@@ -16,6 +16,7 @@ test s = do
 
 main = do
     print $ test "Aa0"   -- OK
+    print $ test "Aa0000"-- OK
     print $ test "A"     -- 文字不足
     print $ test "aa0"   -- ch0で失敗
     print $ test "AA0"   -- ch1で失敗
